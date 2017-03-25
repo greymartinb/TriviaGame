@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Grey's Trivia</title>
+
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css"></style>
+   	<link rel="stylesheet" type="text/css" href="assets/css/style.css"></style>
+   	<link href="https://fonts.googleapis.com/css?family=Passion+One" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+    <!-- Added link to the jQuery Library -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <script type="text/javascript" src="assets/javascript/app.js"/></script>
+    </head>
+<body>
+
+	<main>
+		<header>
+			<img class= "banner" src= "assets/images/banner.jpg" alt= "The Dollop Podcast Banner">
+			<h3>TRIVIA GAME</h3>
+		</header>
+		<div class = "clockSpot">
+		</div>
+	<div class="mainText">
+			<p> The Dollop is a popular bi-weekly podcast in which, Dave Anthony, Comedian, Writer, Director and Renaissance Man reads a story about American History to his friend Gary.
+
+			This is a trivia game devoted to the things I have learned from this show which ranges from the facisnating to the f***ed up.</p>
+		</div>
+
+		<div class = "answers"></div>
+		<div class ="picts">
+		</div>
+
+		<div class= "guess">
+			<button id= "start"><h4>Start</h4></button>
+		</div>
+	</main>
+
+</body>
+
+<script>
+
+
+$("button#start").on("click", function()
+	{
+		setUpGame();
+	
+		$(".clockSpot").replaceWith("<div class='clockSpot'> <h3> Time Left : "+ watchTime+ "</h3></div>");
+		console.log(watchTime);
+		start();
+
+	});
+$(document).on('click', 'button.right', function()
+	{
+	wins++;
+	matchesPlayed++;
+	picturesShown++;
+	watchTime= 31;
+	results();
+	if (matchesPlayed===9)
+	{
+	for (var i= 0; i <4; i++) {
+	$("." +i).hide();
+	$(".mainText").replaceWith("<div class= 'mainText'> <h3> Losses : "+ losses + "</h3> <h3> Wins : " + wins + "</h3> <h3> Questions Answered : " + matchesPlayed + "</h3> </div>");
+	};}
+
+	});
+$(document).on('click', 'button.wrong', function()
+	{
+	losses++;
+	picturesShown++;
+	matchesPlayed++;
+	watchTime= 31;
+	results();
+	if (matchesPlayed===9)
+	{
+	for (var i= 0; i <4; i++) {
+	$("." +i).hide();};
+
+	$(".mainText").replaceWith("<div class= 'mainText'> <h3> Losses : "+ losses + "</h3> <h3> Wins : " + wins + "</h3> <h3> Questions Answered : " + matchesPlayed + "</h3> </div>");
+		window.clearInterval(intervalId);
+
+	};});
+
+
+$(document).on('click', 'button.moveOn', function()
+{
+
+	nextQuestion();
+});
+
+
+
+
+
+
+
+</script>
+
+
+
+</html>

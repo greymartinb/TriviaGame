@@ -1,0 +1,96 @@
+body{
+	height: 960px;
+	width: 100%;
+	background-size: 100% 100%;
+	background-image: url(https://images2.alphacoders.com/659/659390.jpg);
+
+
+}
+
+
+main{
+	width: 660px;
+	background: rgba(255, 255, 255, 0.8);
+	margin: auto;
+	height: 100%;
+
+}
+
+.pictures {
+display: block;
+margin: auto;
+width: 50%;
+height: 50%;
+position: relative;
+top: -100px;
+
+
+}
+
+
+.banner{
+	width:100%;
+	height: 20%;
+	display: block;
+	margin: auto;
+
+
+}
+.clockSpot{
+	height: 40px;
+
+
+
+}
+h3{font-family: 'Passion One', cursive;
+color:#D81C16;
+font-size:35px;
+text-shadow: -1px 0 #FEC551, 0 1px #FEC551, 1px 0 #FEC551, 0 -1px #FEC551;
+position: relative;
+top: -188px;
+left: 7px;
+
+}
+
+p{
+font-family: 'Merriweather', serif;
+margin: auto;
+padding-left: 30px;
+padding-right: 30px;
+font-size: 20px;
+
+}
+
+#start{
+	font-family: 'Passion One', cursive;
+	font-family: 'Passion One', cursive;
+color:#D81C16;
+font-size:35px;
+text-shadow: -1px 0 #FEC551, 0 1px #FEC551, 1px 0 #FEC551, 0 -1px #FEC551;
+align-content: center;
+position: relative;
+top: 20px;
+left: 250px;
+}
+
+.question{font-family: 'Passion One', cursive;
+color:#D81C16;
+font-size:35px;
+text-shadow: -1px 0 #FEC551, 0 1px #FEC551, 1px 0 #FEC551, 0 -1px #FEC551;
+position:relative;
+margin:0 auto;
+display:block;
+width: 80%;
+padding-top: 10px;
+padding-bottom: 10px;
+}
+
+button:hover{
+	border-color: red;
+	border-width: 0px;
+
+
+}
+
+
+
