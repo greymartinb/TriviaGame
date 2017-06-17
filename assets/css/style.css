@@ -15,7 +15,9 @@ main{
 	height: 100%;
 
 }
-
+.mainText{
+	min-height: 0%;
+}
 .pictures {
 display: block;
 margin: auto;
@@ -80,6 +82,7 @@ text-shadow: -1px 0 #FEC551, 0 1px #FEC551, 1px 0 #FEC551, 0 -1px #FEC551;
 position:relative;
 margin:0 auto;
 display:block;
+top:-82px;
 width: 80%;
 padding-top: 10px;
 padding-bottom: 10px;

@@ -57,7 +57,7 @@ $(document).on('click', 'button.right', function()
 	picturesShown++;
 	watchTime= 31;
 	results();
-	if (matchesPlayed===9)
+	if (matchesPlayed===10)
 	{
 	for (var i= 0; i <4; i++) {
 	$("." +i).hide();
@@ -72,7 +72,7 @@ $(document).on('click', 'button.wrong', function()
 	matchesPlayed++;
 	watchTime= 31;
 	results();
-	if (matchesPlayed===9)
+	if (matchesPlayed===10)
 	{
 	for (var i= 0; i <4; i++) {
 	$("." +i).hide();};
@@ -85,8 +85,18 @@ $(document).on('click', 'button.wrong', function()
 
 $(document).on('click', 'button.moveOn', function()
 {
+	if (matchesPlayed===9){
+	for (var i= 0; i <4; i++) {
+	$("." +i).hide();};
+	$(".picts").hide();
 
+	$(".mainText").replaceWith("<div class= 'mainText'> <h3> Losses : "+ losses + "</h3> <h3> Wins : " + wins + "</h3> <h3> Questions Answered : " + matchesPlayed + "</h3> </div>");
+		window.clearInterval(intervalId);
+
+	}
+	else{
 	nextQuestion();
+}
 });
 
 
